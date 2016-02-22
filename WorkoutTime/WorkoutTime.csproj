@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9A20DC99-ED46-4D6E-8D7E-F58491264E6A}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WorkoutTime</RootNamespace>
+    <AssemblyName>WorkoutTime</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <XamarinInsightsApiKey>6255695e17c106c85e6b2fdb833b3d3b988449a4</XamarinInsightsApiKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Xamarin Inc</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <CodesignProvision>5bfe1f2f-5f02-4a61-970f-a6710041b001</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.4.0.52\lib\portable-net45+win8+monotouch+monoandroid+xamarin.ios10\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.52\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\packages\ServiceStack.Client.4.0.52\lib\Xamarin.iOS10\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Pcl.iOS">
+      <HintPath>..\packages\ServiceStack.Client.4.0.52\lib\Xamarin.iOS10\ServiceStack.Pcl.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.4\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.11.4\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-Small-60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon-83.5%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="TableViewControllers\" />
+    <Folder Include="TableViewCells\" />
+    <Folder Include="NavigationControllers\" />
+    <Folder Include="ViewControllers\" />
+    <Folder Include="Domain\" />
+    <Folder Include="ViewExtensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="NavigationControllers\EditIntervalNavigationController.cs" />
+    <Compile Include="NavigationControllers\EditIntervalNavigationController.designer.cs">
+      <DependentUpon>EditIntervalNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewControllers\IntervalsTableViewController.cs" />
+    <Compile Include="TableViewControllers\IntervalsTableViewController.designer.cs">
+      <DependentUpon>IntervalsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCells\IntervalTableViewCell.cs" />
+    <Compile Include="TableViewCells\IntervalTableViewCell.designer.cs">
+      <DependentUpon>IntervalTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewControllers\EditIntervalTableViewController.cs" />
+    <Compile Include="TableViewControllers\EditIntervalTableViewController.designer.cs">
+      <DependentUpon>EditIntervalTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationControllers\PlayNavigationController.cs" />
+    <Compile Include="NavigationControllers\PlayNavigationController.designer.cs">
+      <DependentUpon>PlayNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\PlayViewController.cs" />
+    <Compile Include="ViewControllers\PlayViewController.designer.cs">
+      <DependentUpon>PlayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Interval.cs" />
+    <Compile Include="Domain\TestData.cs" />
+    <Compile Include="ViewExtensions\TableViewCellExtensions.cs" />
+    <Compile Include="ViewExtensions\StoryboardExtensions.cs" />
+    <Compile Include="Domain\IntervalExtensions.cs" />
+    <Compile Include="TableViewCells\PlayTableViewCell.cs" />
+    <Compile Include="TableViewCells\PlayTableViewCell.designer.cs">
+      <DependentUpon>PlayTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewControllers\PlayTableViewController.cs" />
+    <Compile Include="TableViewControllers\PlayTableViewController.designer.cs">
+      <DependentUpon>PlayTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCells\IIntervalTableViewCell.cs" />
+    <Compile Include="ViewExtensions\FontExtensions.cs" />
+    <Compile Include="ViewExtensions\FormatExtensions.cs" />
+    <Compile Include="ViewExtensions\LabelExtensions.cs" />
+    <Compile Include="ViewExtensions\DisplayLinkExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\robot-stop.wav" />
+    <BundleResource Include="Resources\robot-start.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.4\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.4\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+</Project>
